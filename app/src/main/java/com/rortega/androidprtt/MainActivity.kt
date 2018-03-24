@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                                 results
                                         .filter { it.status == RangingResult.STATUS_SUCCESS }
                                         .forEach {
-                                            textview_results.append("\nAccess point ${it.macAddress} is at ${it.distanceMm.div(1000)} +/- ${it.distanceStdDevMm.div(1000)} meters.")
+                                            textview_results.append("\nAccess point ${it.macAddress} is at ${it.distanceMm.div(1000.0)} +/- ${it.distanceStdDevMm.div(1000.0)} meters (${it.rssi.times(-0.5)} dB). ")
                                         }
                             }
 
